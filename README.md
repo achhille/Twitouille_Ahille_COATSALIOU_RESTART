@@ -9,7 +9,7 @@ The Figma design for the Twitouille application can be accessed at the following
 
 ## Preview
 Here is a preview of the Twitouille application:
-![Preview](https://imgur.com/a/2QHhd8g)
+ https://imgur.com/a/2QHhd8g
 
 Feel free to explore the features and functionalities of Twitouille!
 
