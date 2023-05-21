@@ -1,0 +1,254 @@
+
+
+body{
+  background-color: rgb(20, 20, 23);
+  color: aliceblue;
+}
+
+button{
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover{
+  transform: scale(1.1) rotateX(10deg) rotateY(10deg);
+  cursor: pointer;
+}
+
+
+
+
+.background-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("https://media.discordapp.net/attachments/1034164298177581166/1109840755444420648/giphy.gif?width=899&height=853");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  filter: grayscale(1) blur(20px);
+}
+
+
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  margin: 0 auto;
+}
+
+
+
+/* interface pour envoyer des twoots */
+.twooting{
+  animation: fadeInUp 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00425A;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+.twooting textarea{
+  height: 10vh;
+  width: 30vw;
+  padding: 10px;
+  border: none;
+  background-color: #014d69;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.twooting button{
+  transition: 0.2s ease-in-out;
+  height: 5vh;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #014d69;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.twooting button:hover{
+  transition: 0.2s ease-in-out;
+  background-color: #BFDB38;
+  border-radius: 8px 50% 50% 8px;
+}
+
+.twooting button:active{
+  background-color: blue;
+  transform: scale(5) translateX(20%);
+}
+
+#connec{
+  color: #fff;
+}
+#connec:hover{
+  cursor: pointer;
+}
+
+
+
+/* lite de tous les twoots */
+.twoots{
+  animation: slideInRight 1s ease-out;
+  width: 70%;
+  background-color: #00425A;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.twoot{
+  background-color: #014d69;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.twootName{
+  user-select: none;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.twootContent{
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.twootDate{
+  user-select: none;
+  color: #8899a6;
+  font-size: 12px;
+}
+
+.btnDel{
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btnDel:hover{
+  background-color: #c82333;
+}
+
+
+
+
+.titleCO{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.formCO{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.formElement{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.formElement:focus{
+  background-color: rgb(230, 230, 230);
+}
+
+.send{
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.noacc{
+  margin-top: 20px;
+  background-color: rgb(241, 87, 87);
+}
+
+.alracc{
+  margin-top: 20px;
+  background-color: rgb(101, 206, 102);
+}
+
+
+
+
+
+/* keyframes */
+@keyframes fadeInUp{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight{
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+/* responsive écrans petits */
+@media screen and (max-width: 768px){
+  .mainContainer{
+    width: 90%;
+  }
+
+  .twooting textarea{
+    width: 100%;
+  }
+
+  .twoots{
+    width: 100%;
+  }
+}
+
+/* responsive écrans tout pitits */
+@media screen and (max-width: 480px){
+  .mainContainer{
+    width: 100%;
+  }
+}

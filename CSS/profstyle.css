@@ -1,0 +1,57 @@
+
+body{
+    background-color: rgb(20, 20, 23);
+    color: aliceblue;
+    margin: 0;
+}
+
+
+button{
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover{
+  transform: scale(1.1) rotateX(10deg) rotateY(10deg);
+  cursor: pointer;
+}
+
+
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pfp{
+    width: 10vh;
+    user-select: none;
+    margin-bottom: 20px;
+}
+
+.userInfos{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.userText{
+    margin: 5px;
+}
+
+.disco{
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.disco:hover{
+    background-color: #c82333;
+}
