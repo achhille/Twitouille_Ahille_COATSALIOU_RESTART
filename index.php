@@ -18,6 +18,14 @@ $allTwoots = $requete->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
+<?php
+
+$requete = $requete->fetch(PDO::FETCH_ASSOC);
+// echo json_encode($requete);
+
+?>
+
+
 
 
 
