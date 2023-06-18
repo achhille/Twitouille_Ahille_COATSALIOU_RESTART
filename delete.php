@@ -14,4 +14,5 @@ $supp->execute(
 // redirection vers l'index
 header("Location: index.php");
 
+
 ?>

@@ -44,6 +44,58 @@ button:hover{
 
 
 
+
+
+
+
+.searchBar {
+  animation: fadeInDown 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligner à droite */
+  background-color: #00425A;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+.searchBar input[type="text"] {
+  height: 30px;
+  width: 200px;
+  padding: 6px;
+  border: none;
+  background-color: #014d69;
+  border-radius: 8px;
+  color: #fff;
+  margin-right: 10px; /* Espacement à droite */
+}
+
+.searchBar button[type="submit"] {
+  transition: 0.2s ease-in-out;
+  height: 30px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #014d69;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.searchBar button[type="submit"]:hover {
+  background-color: #208A70;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* interface pour envoyer des twoots */
 .twooting{
   animation: fadeInUp 1s ease-out;
@@ -201,6 +253,101 @@ button:hover{
 
 
 
+
+
+/* bouton flottant */
+#floatingButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FF7F51;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+}
+
+#floatingButton img {
+  width: 100%;
+  height: auto;
+}
+
+
+#floatingButton:hover {
+  background-color: #fc6c37;
+}
+
+#floatingButton:focus {
+  outline: none;
+}
+
+
+
+
+
+/* fenetre modal */
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  background-color: #00425A;
+  margin: 10% auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modalContent textarea {
+  resize: none;
+  height: 10vh;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #014d69;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.modalContent button {
+  background-color: #014d69;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalContent button:hover {
+  background-color: #BFDB38;
+}
+
+.modalContent input[type="hidden"] {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
 /* keyframes */
 @keyframes fadeInUp{
   0% {
@@ -224,6 +371,16 @@ button:hover{
   }
 }
 
+@keyframes fadeInDown{
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 

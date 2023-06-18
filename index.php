@@ -63,6 +63,13 @@ $requete = $requete->fetch(PDO::FETCH_ASSOC);
 
 
 
+<form class="searchBar" action="search.php" method="POST">
+    <input type="text" name="search" placeholder="Rechercher un twoot">
+    <button type="submit">Rechercher</button>
+</form>
+
+
+
     <div class="twoots">
         <?php foreach ($allTwoots as $twoot) { ?>
         <div class="twoot">
@@ -88,14 +95,48 @@ $requete = $requete->fetch(PDO::FETCH_ASSOC);
             <?php } } ?>
             
 
+
         </div>
         <?php } ?>
     </div>
 
 
-
     
-</div>    
+    
+</div>
+
+<?php
+    require 'template/footer.php';
+?>
+
+
+
+<!-- le bouton qui flotte -->
+<?php if (isset($_SESSION['user_name'])) { ?>
+  <button id="floatingButton" onclick="openModal()">
+    <img src="https://cdn-icons-png.flaticon.com/512/266/266146.png" alt="Publier" />
+  </button>
+<?php } ?>
+
+
+<!-- la fenetre modal -->
+<div id="modal" class="modalContainer">
+  <div class="modalContent">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <form class="postForm" method="POST" action="insertTW.php">
+      <textarea type="text" name="send" placeholder="Quoi de neuf ?"></textarea>
+      <button type="submit" name="sendTwoot">Publier</button>
+      <input type="hidden" name="name" value="<?= $_SESSION['user_name'] ?>">
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 <script src="SCRIPT/script.js"></script>
 </body>

@@ -34,7 +34,7 @@
 
 <div class="sidenav" id="mySidenav">
     <a href="index.php">Accueil</a>
-    <a href="building.php">Recherche</a>
+    <a href="searching.php">Recherche</a>
     <a href="profile.php">Compte</a>
     <a href="about.php">Infos</a>
 </div>
